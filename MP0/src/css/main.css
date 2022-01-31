@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.out {
+    width: 45%;
+    height: 55%;
+    background-color: gray;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.name {
+    width: 50%;
+    background-color: transparent;
+    text-align: center;
+    color:white;
+    /* margin-block: 10px; */
+    font-size: 25px;
+    font-family:cursive;
+}
+
+.hre {
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.hre a {
+    
+}
+
+.photo {
+    width: 20%;
+    margin-top: 30px;
+    
+}
+
+.email{
+    font-style: italic;
+    color:white;
+}
+
+.introduction {
+    /* border: turquoise 2px solid; */
+    /* width: 100%; */
+    color:white;
+    padding-inline: 15px;
+}
+
+.Activities {
+    /* width: 70%; */
+    color: white;
+    /* margin-block: 10px; */
+    padding-inline: 15px;
+    margin-bottom: 20px;
+}
