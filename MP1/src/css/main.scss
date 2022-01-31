@@ -1,0 +1,411 @@
+/* Your SCSS here. */
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: chartreuse;
+}
+
+.navigation{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    transition: ease-in 0.5s;
+    background-color: aqua;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation .sub-nav{
+    width: 50%;
+    height: 100%;
+}
+
+.navigation #nav-right{
+    background-color: lightcyan;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation #nav-left{
+    background-color: skyblue;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation .name {
+    font-family: monospace;
+    color: violet;
+    font-size: calc(3px + 1.5vw);
+    margin-inline: 10px;
+}
+
+#myVideo {
+    position: absolute;
+    z-index: -1;
+    // top: -50px;
+    // transform: translateY(200px);
+    min-width: 100vw;
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.navigation a{
+    margin-inline: 10px;
+    user-select: none;
+    color: violet;
+    font-family: monospace;
+    font-size: calc(3px + 2vw);
+    text-decoration: none;
+    transition: 0.5s;
+    //background-color: hsla(0, 0, 0, 0);
+}
+
+.personal {
+    width: 100%;
+    min-height: 600px;
+    background-color: brown;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections {
+    transform: translateY(calc(10vh));
+}
+
+.personal .title {
+    font-size: calc(10px + 3vw);
+    font-family: fantasy;
+    color: saddlebrown;
+    font-weight: 800;
+}
+
+#main {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: hidden;
+}
+
+#main .portrait {
+    width: calc(10px + 15vw);
+    border-radius: 50%;
+    margin-bottom: calc(10px + 0.3vw);
+    animation: animate 10s linear infinite;
+}
+
+#portfolio {
+    background-color: yellowgreen;
+    box-sizing: border-box;
+    
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-container :nth-child(1) {
+}
+
+.slideshow-container :nth-child(2) {
+}
+
+
+.slideshow-container :nth-child(3) {
+}
+
+.mySlides .title{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#education {
+    background-color: steelblue;
+    flex-direction: column;
+    position: relative;
+}
+
+#education #myBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+}
+
+#education .modal {
+    width: 300px;
+    height: 300px;
+    display: none;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    background-color: pink;
+    top:0;
+    left:0;
+    height:100vh;
+    width: 100vw;
+    font-family: fantasy;
+    font-size: xx-large;
+    white-space: pre-wrap;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    height: 50px;
+    font-size: calc(5vw + 50px);
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#about {
+    background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .parallelPic {
+    background-image: url("../assets/wall.jpg");
+    /* Set a specific height */
+    min-height: 300px; 
+    width: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .parallelPic .parallelPicText {
+    font-family: fantasy;
+    font-size: xx-large;
+    color: gold;
+}
+
+#contact {
+    background: seagreen;
+    flex-direction: column;
+}
+
+#contact .title {
+    margin-top: 100px;
+}
+#contact .container {
+    margin: 30px;
+    width: 100%;
+    min-height: 500px;
+    // background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact .container .subContainer {
+    width: 30%;
+    height: 300px;
+    margin-block: 20px;
+    min-width: 300px;
+    border: 2px dashed black;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .container .subContainer .subContainerText {
+    font-family: fantasy;
+    width: 100%;
+    height: 100%;
+    font-size: xx-large;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer {
+    height: 360px;
+    width: 100%;
+    background-color: plum;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .title {
+    font-family: fantasy;
+    font-size: xx-large;
+    color: springgreen;
+}
+
+#liSpan {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+// .picbox {
+//     margin-top: 50px;
+//     width: 300px;
+//     height: 500px;
+//     transform-style: preserve-3d;
+//     position: relative;
+//     animation: animate 10s linear infinite;
+// }
+
+@keyframes animate{
+    0% {
+        transform: rotate(0deg); 
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MP1</title>
+    </head>
+    <script>
+        window.tp = function(href) {
+            window.open(href, '_blank');
+        }
+    </script>
+    <body>
+        <div class = "navigation" id = "nav"> 
+            <div class="sub-nav" id = "nav-left">
+                <div class="name">Xiangcan Li</div>
+            </div>
+            <div class="sub-nav" id = "nav-right">
+                <a onclick="scxrollTop()" id = "idmain" class = "fontSmaller">Main</a>
+                <a href="#portfolio" id = "idportfolio" class = "fontSmaller"> portfolio </a>
+                <a href="#education" id = "ideducation" class = "fontSmaller"> education </a>
+                <a href="#about" id = "idabout" class = "fontSmaller"> about </a>
+                <a href="#contact" id = "idcontact" class = "fontSmaller"> contact </a>
+            </div>
+            
+        </div>
+        <div class="sections">
+            <section class = "personal" id = "main"> 
+                <img src="assets/Portrait.jpg" class="portrait">
+                <div class="title">Xiangcan Li</div>
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/lebron.mp4" type="video/mp4">
+                </video>
+            </section>
+            <section class = "personal" id = "portfolio"> 
+                <!-- <div class="title">Technical Skills: C/C++, Java, Python</div> -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="title">Technical: C/C++, Java, Python</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                        <div class="title">Favorite NBA Player: Lebron James</div>
+                    </div>
+                  
+                    <div class="mySlides fade">
+                        <div class="title">Favorite NBA Team: Lakers</div>
+                    </div>
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a >
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a >
+                  </div>
+            </section>
+            <section class = "personal" id = "education"> 
+                <div class="title">Education</div>
+                <div id="myBtn"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class = "modal-text">
+                            University of Illinois at Urbana-Champaign
+                            Computer Science with a dual degree in Applied Mathematics and Statistics
+                        </div>
+                      </div>
+                </div>
+            </section>
+            <section class = "personal" id = "about"> 
+                <div class="title">About</div>
+                <div class="parallelPic">
+                    <div class = "parallelPicText">
+                        I am a highly motivated computer science student from the University of Illinois at Urbana-Champaign. 
+                        I have much experience in computer science. I delivered enterprise software to the E-commerce application platform using Java Spring Boot Framework during my internship at B-Soft this summer. 
+                        I am constantly looking for challenges and new opportunities. 
+                    </div>
+                </div>
+            </section>
+            <section class = "personal" id = "contact"> 
+                <div class="title">Contact Me</div>
+                <div class="container">
+                    <div class="subContainer">
+                        <div class="subContainerText">
+                            Email: xl69@illinois.edu
+                        </div>
+                    </div>
+                    <div class="subContainer">
+                        <div class="subContainerText">
+                            Phone: (+1)217-417-8601
+                        </div>
+                    </div>
+                    <div class="subContainer">
+                        <div class="subContainerText">
+                            <span id = "liSpan" onclick="tp('https://www.linkedin.com/in/xl69/')"><div>Social Media:</div><img src="./assets/svg/linkedin.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class = "footer"> 
+                <div class="title">Developed by Xiangcan Li</div>
+            </section>
+        </div>
+    </body>
+    <script>
+        //nav_bar = document.getElementById("nav");
+        function scxrollTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'})
+        }
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementsByClassName('navigation')[0].style.height = "50px";
+                document.getElementsByClassName('fontSmaller')[0].style.fontSize = "calc(3px + 1.5vw)";
+                document.getElementsByClassName('fontSmaller')[1].style.fontSize = "calc(3px + 1.5vw)";
+                document.getElementsByClassName('fontSmaller')[2].style.fontSize = "calc(3px + 1.5vw)";
+                document.getElementsByClassName('fontSmaller')[3].style.fontSize = "calc(3px + 1.5vw)";
+                document.getElementsByClassName('fontSmaller')[4].style.fontSize = "calc(3px + 1.5vw)";
+            } else {
+                document.getElementsByClassName('navigation')[0].style.height = "100px";
+                document.getElementsByClassName('fontSmaller')[0].style.fontSize = "calc(3px + 2vw)";
+                document.getElementsByClassName('fontSmaller')[1].style.fontSize = "calc(3px + 2vw)";
+                document.getElementsByClassName('fontSmaller')[2].style.fontSize = "calc(3px + 2vw)";
+                document.getElementsByClassName('fontSmaller')[3].style.fontSize = "calc(3px + 2vw)";
+                document.getElementsByClassName('fontSmaller')[4].style.fontSize = "calc(3px + 2vw)";
+            }
+
+            let height = document.documentElement.scrollTop;
+            let hheight = document.documentElement.scrollTop;
+            if ((height >= 0 && height <= 550) || (hheight >= 0 && hheight <= 550)) {
+                console.log(hheight)
+                console.log(height)
+                document.getElementById("idmain").style.backgroundColor = "gray";
+                document.getElementById("idportfolio").style.backgroundColor = "transparent";
+                document.getElementById("ideducation").style.backgroundColor = "transparent";
+                document.getElementById("idabout").style.backgroundColor = "transparent";
+                document.getElementById("idcontact").style.backgroundColor = "transparent";
+            } else if ((height >= 550 && height <= 1100) || (hheight >= 550 && hheight <= 1100)) {
+                document.getElementById("idmain").style.backgroundColor = "transparent";
+                document.getElementById("idportfolio").style.backgroundColor = "gray";
+                document.getElementById("ideducation").style.backgroundColor = "transparent";
+                document.getElementById("idabout").style.backgroundColor = "transparent";
+                document.getElementById("idcontact").style.backgroundColor = "transparent";
+            } else if ((height >= 1100 && height <= 1700) || (hheight >= 1100 && hheight <= 1700)) {
+                document.getElementById("idmain").style.backgroundColor = "transparent";
+                document.getElementById("idportfolio").style.backgroundColor = "transparent";
+                document.getElementById("ideducation").style.backgroundColor = "gray";
+                document.getElementById("idabout").style.backgroundColor = "transparent";
+                document.getElementById("idcontact").style.backgroundColor = "transparent";
+            } else if ((height >= 1700 && height <= 2300) || (hheight >= 1700 && hheight <= 2300)) {
+                document.getElementById("idmain").style.backgroundColor = "transparent";
+                document.getElementById("idportfolio").style.backgroundColor = "transparent";
+                document.getElementById("ideducation").style.backgroundColor = "transparent";
+                document.getElementById("idabout").style.backgroundColor = "gray";
+                document.getElementById("idcontact").style.backgroundColor = "transparent";
+            } else {
+                document.getElementById("idmain").style.backgroundColor = "transparent";
+                document.getElementById("idportfolio").style.backgroundColor = "transparent";
+                document.getElementById("ideducation").style.backgroundColor = "transparent";
+                document.getElementById("idabout").style.backgroundColor = "transparent";
+                document.getElementById("idcontact").style.backgroundColor = "gray";
+            }
+
+
+        }
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+            btn.style.display = "none";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+            btn.style.display = "block";
+            
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "flex";
+
+        }    </script>
+</html>
