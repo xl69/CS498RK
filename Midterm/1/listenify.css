@@ -1,0 +1,72 @@
+.parent{
+  background-color: black;
+  width: 80vw;
+  height: 90vh;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card {
+  background-color: rgba(42, 41, 42, 0.8);
+  width: 90%;
+  height: 200px;
+  border-radius: 20px;
+  margin-block: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.profile {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.profile .name {
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.profile .photo {
+  margin-inline: 20px;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.profile:nth-child(1) {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.now-playing {
+  margin-top: 10px;
+  width: 80%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+.artist {
+  color: green;
+  font-weight: 700;
+  font-size: 35px;
+  margin-inline: 30px;
+}
+
+.song {
+  font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  color: white;
+}

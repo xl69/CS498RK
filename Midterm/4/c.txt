@@ -1,0 +1,1 @@
+This is not a good strategy. A song will be listened to by many users. If the user id is saved, a lot of data will be added. We should augment the user data to include a list of the song's IDs.

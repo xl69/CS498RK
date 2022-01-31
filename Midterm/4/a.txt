@@ -1,0 +1,3 @@
+> var db = connect("localhost:27017/myDatabase");
+> var album = db.album.findOne({name:"Thriller", artist:"Michael Jackso"})
+> var album_songs = db.song.find({"_id":{$in:album.songs}},{"name":1, "_id":0}).toArray())
